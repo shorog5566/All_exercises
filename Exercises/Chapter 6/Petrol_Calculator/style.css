@@ -1,0 +1,287 @@
+/* 
+   PETROL CALCULATOR - STYLESHEET
+   This file contains all styling for the petrol calculator application
+   Includes professional design, hover effects, and focus states
+*/
+
+/* ===== UNIVERSAL STYLES ===== */
+/* Reset default browser styles and set base font properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+   Body styling:
+   - Uses a modern color scheme with gradient background
+   - Sets typography with fallback fonts
+   - Ensures minimum height for footer placement
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== CONTAINER STYLES ===== */
+/* Main container for the entire application */
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* 
+   Animation for smooth entrance of the container
+   Creates a subtle zoom and fade-in effect
+*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== HEADER STYLES ===== */
+/* Header section with gradient background */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Main heading styling */
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Subtitle styling under the heading */
+.subtitle {
+    font-size: 1em;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+/* Main content area with padding */
+main {
+    padding: 40px 30px;
+}
+
+/* 
+   Form group styling:
+   - Creates vertical spacing between input groups
+   - Consistent structure for form elements
+*/
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Label styling for input fields */
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+/* 
+   Input field styling:
+   - Clean, modern appearance
+   - Smooth transitions for interactive states
+   - Clear border styling
+*/
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* 
+   Focus state for input fields:
+   - Changes border color to primary color
+   - Adds subtle shadow for depth
+   - Enlarges slightly for visual feedback
+   - Changes background color
+*/
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+/* 
+   Hover state for input fields:
+   - Border color changes on hover
+   - Provides visual feedback to user
+*/
+.form-group input:hover {
+    border-color: #667eea;
+}
+
+/* ===== BUTTON CONTAINER STYLES ===== */
+/* Container for buttons with spacing */
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+/* 
+   Calculate button styling:
+   - Bold text with uppercase styling
+   - Gradient background for professional look
+   - Smooth transitions for all interactive states
+*/
+.calculate-btn {
+    flex: 1;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* 
+   Hover effect for button:
+   - Lifts the button with transform
+   - Enhances shadow for depth
+   - Brightens the background slightly
+*/
+.calculate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* 
+   Active state for button:
+   - Pressed appearance when clicked
+   - Visual feedback for user action
+*/
+.calculate-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* ===== RESULT DISPLAY STYLES ===== */
+/* Container for displaying calculation results */
+.result-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f4ff;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+   Result text styling:
+   - Bold text for emphasis
+   - Large font size for readability
+   - Green color to indicate success
+   - Animation when result appears
+*/
+.result-text {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #667eea;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 
+   Animation for result text appearance:
+   - Fade in effect with slight scale increase
+*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== FOOTER STYLES ===== */
+/* Footer section at the bottom of container */
+footer {
+    background-color: #f9f9f9;
+    color: #999;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Footer paragraph styling */
+footer p {
+    margin: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Media query for smaller screens (mobile devices) */
+@media (max-width: 600px) {
+    /* Reduce header font size on mobile */
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Reduce padding on mobile for better space usage */
+    main {
+        padding: 30px 20px;
+    }
+
+    /* Increase padding for input fields on mobile for easier touch */
+    .form-group input {
+        padding: 15px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Button styling for mobile */
+    .calculate-btn {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    /* Result text sizing for mobile */
+    .result-text {
+        font-size: 1.3em;
+    }
+}
